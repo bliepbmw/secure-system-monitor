@@ -1,0 +1,11 @@
+[Unit]
+Description=Secure System Monitor
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/lua /opt/secure-system-monitor/main.lua
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
